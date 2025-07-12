@@ -37,18 +37,7 @@ jobs:
         uses: step-security/harden-runner@6c439dc8bdf85cadbbce9ed30d1c7b959517bc49 # v2.12.2
         with:
           egress-policy: block
-          allowed-endpoints: >
-            151.101.162.132:443
-            api.github.com:443
-            auth.docker.io:443
-            dl-cdn.alpinelinux.org:443
-            github.com:443
-            grype.anchore.io:443
-            objects.githubusercontent.com:443
-            production.cloudflare.docker.com:443
-            raw.githubusercontent.com:443
-            registry-1.docker.io:443
-            release-assets.githubusercontent.com:443
+          allowed-endpoints: audit
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3.11.1

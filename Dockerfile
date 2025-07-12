@@ -8,9 +8,10 @@ COPY src/ /
 FROM python:3-alpine@sha256:9b4929a72599b6c6389ece4ecbf415fd1355129f22bb92bb137eea098f05e975 AS runtime
 
 # Update the image to remediate any vulnerabilities.
-RUN apk upgrade -U --no-cache -a -l && \ 
-    # Remove suid & sgid bits from all files.
-    find / -xdev -perm /6000 -exec chmod ug-s {} \; 2> /dev/null || true
+RUN apk upgrade -U --no-cache -a -l
+
+# Remove suid & sgid bits from all files.
+RUN find / -xdev -perm /6000 -exec chmod ug-s {} \; 2> /dev/null || true    
 
 # Copy the ssh-audit code from files container.
 COPY --from=files / /

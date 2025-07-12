@@ -38,18 +38,17 @@ jobs:
         with:
           egress-policy: block
           allowed-endpoints: >
+            151.101.162.132:443
             api.github.com:443
             auth.docker.io:443
             dl-cdn.alpinelinux.org:443
-            fulcio.sigstore.dev:443
-            ghcr.io:443
             github.com:443
+            grype.anchore.io:443
             objects.githubusercontent.com:443
             production.cloudflare.docker.com:443
+            raw.githubusercontent.com:443
             registry-1.docker.io:443
-            rekor.sigstore.dev:443
             release-assets.githubusercontent.com:443
-            tuf-repo-cdn.sigstore.dev:443
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3.11.1

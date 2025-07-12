@@ -46,3 +46,19 @@ updates:
       applies-to: version-updates
       patterns:
       - "*"
+- package-ecosystem: "docker"
+  directory: "/"
+  commit-message:
+    prefix: "docker"
+  labels: [ 'docker' ]
+  assignees:
+  - "Harvester57"
+  schedule:
+    interval: "cron"
+    cronjob: "0 7 * * *"
+    timezone: "Europe/Paris"
+  groups:
+    docker-dependencies:
+      applies-to: version-updates
+      patterns:
+      - "*"

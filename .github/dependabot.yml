@@ -10,7 +10,7 @@ updates:
   commit-message:
     prefix: "pip"
     prefix-development: "pip-dev"
-  labels: [ 'chore' ]
+  labels: [ 'pip' ]
   assignees:
   - "Harvester57"
   schedule:
@@ -34,7 +34,7 @@ updates:
   directory: "/"
   commit-message:
     prefix: "actions"
-  labels: [ 'github_actions' ]
+  labels: [ 'github-actions' ]
   assignees:
   - "Harvester57"
   schedule:

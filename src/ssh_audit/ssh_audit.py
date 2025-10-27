@@ -53,7 +53,7 @@ from ssh_audit.gextest import GEXTest
 from ssh_audit.hostkeytest import HostKeyTest
 from ssh_audit.outputbuffer import OutputBuffer
 from ssh_audit.policy import Policy
-from ssh_audit.hardeningguides import Hardening_Guides
+from ssh_audit.hardening_guides import Hardening_Guides
 from ssh_audit.product import Product
 from ssh_audit.protocol import Protocol
 from ssh_audit.software import Software
@@ -333,7 +333,7 @@ def output_info(out: OutputBuffer, software: Optional['Software'], client_audit:
 
         # If any warnings or failures were given, print a link to the hardening guides.
         if any_problems:
-            out.warn('(nfo) For hardening guides on common OSes, please see: <https://www.ssh-audit.com/hardening_guides.html>')
+            out.warn('(nfo) For hardening guides on common OSes, a built-in list can be viewed with --list-hardening-guides, or an online list can be found at: <https://www.ssh-audit.com/hardening_guides.html>')
 
         # Add any additional notes.
         for additional_note in additional_notes:

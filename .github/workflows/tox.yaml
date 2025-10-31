@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install -U codecov coveralls flake8 mypy pylint pytest tox
+          python3 -m pip install -U codecov coveralls flake8 mypy pylint pytest tox tox-extra
           
       - name: Run Tox
         run: python3 -m tox

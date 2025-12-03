@@ -5,7 +5,7 @@ FROM scratch AS files
 COPY ssh-audit.py /
 COPY src/ /
 
-FROM python:3-alpine@sha256:8373231e1e906ddfb457748bfc032c4c06ada8c759b7b62d9c73ec2a3c56e710 AS runtime
+FROM python:3-alpine@sha256:d7fb7df19ca613dcebf0969d0ab2b04bb35e95f325c104da1b1718162468f6de AS runtime
 
 # Update the image to remediate any vulnerabilities.
 RUN apk upgrade -U --no-cache -a -l
